@@ -1,8 +1,9 @@
 """Task 2: Multilevel access control system for laboratory work #1."""
+
 import os
 import sys
 
-sys.path.append (os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from shared.student import GROUP_NAME, STUDENT_NAME, VARIANT_NUMBER
 
 USERS = {
@@ -129,7 +130,6 @@ def run_task2():
     print()
     print_access_checks()
     print()
-
 
 
 if __name__ == "__main__":

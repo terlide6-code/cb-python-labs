@@ -3,7 +3,7 @@
 import os
 import sys
 
-sys.path.append (os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from labs.lab01.task1 import run_task1
 from labs.lab01.task2 import run_task2
 from labs.lab01.task3 import main as task3_main

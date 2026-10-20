@@ -44,7 +44,9 @@ def generate_hash(password: str, salt: str = "00000") -> str:
         raise ValueError("Password and salt must not be empty")
 
     if len(password) < MIN_PASSWORD_LENGTH:
-        raise ValidationError(f"Password is shorter than {MIN_PASSWORD_LENGTH} characters")
+        raise ValidationError(
+            f"Password is shorter than {MIN_PASSWORD_LENGTH} characters"
+        )
 
     value_to_hash = password + salt
     return hashlib.sha3_224(value_to_hash.encode()).hexdigest()
@@ -166,9 +168,7 @@ def log_event(function):
                 "event": "login",
                 "user": username,
                 "result": result,
-                "timestamp": datetime.now(timezone.utc).strftime(
-                    "%Y-%m-%d %H:%M:%S"
-                ),
+                "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S"),
                 "args": [],
                 "kwargs": {},
             }
