@@ -4,7 +4,7 @@ import os
 import random
 import sys
 
-sys.path.append (os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from shared.student import GROUP_NAME, STUDENT_NAME, VARIANT_NUMBER
 
 PASSWORDS = [
@@ -64,10 +64,7 @@ def count_character_criteria(password):
 
 def is_forbidden(password):
     """Return True if the password is forbidden by list or length."""
-    return (
-        password in FORBIDDEN_PASSWORDS
-        or len(password) < CRITERIA["min_length"]
-    )
+    return password in FORBIDDEN_PASSWORDS or len(password) < CRITERIA["min_length"]
 
 
 def classify_password(password, all_passwords):
